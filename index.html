@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KALYAN DAWAR SHOPPING MALL DUBAI | Decentralized Import Management</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <style>
+    :root {
+      --primary-color: #1a1a2e;
+      --secondary-color: #16213e;
+      --accent-color: #e94560;
+      --light-color: #f0f0f5;
+      --dark-color: #0f3460;
+      --success-color: #00b894;
+      --warning-color: #fdcb6e;
+      --text-color: #f5f5f7;
+      --text-muted: #b0b0c3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: var(--secondary-color);
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo img {
+      height: 50px;
+      border-radius: 6px;
+      object-fit: contain;
+      background: white;
+      padding: 4px;
+    }
+
+    .logo h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-color);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background-color: var(--accent-color);
+      color: var(--light-color);
+      outline: none;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--secondary-color), var(--dark-color));
+      color: var(--text-color);
+      padding: 5rem 1rem 6rem;
+      text-align: center;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: var(--light-color);
+      padding: 0.85rem 2rem;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 5px 15px rgba(233, 69, 96, 0.5);
+      margin-right: 1rem;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--accent-color), #d93a54);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .btn:hover::after,
+    .btn:focus::after {
+      opacity: 1;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transform: translateY(-3px);
+      outline: none;
+      box-shadow: 0 8px 20px rgba(217, 58, 84, 0.7);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      box-shadow: none;
+      margin-right: 0;
+    }
+
+    .btn-outline:hover,
+    .btn-outline:focus {
+      background-color: var(--accent-color);
+      color: var(--light-color);
+      box-shadow: 0 5px 15px rgba(233, 69, 96, 0.5);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    section {
+      padding: 4rem 0 5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.4rem;
+      color: var(--accent-color);
+      font-weight: 800;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 4px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    .problem-section,
+    .solution-section,
+    .features-section,
+    .tech-stack,
+    .team,
+    .contact,
+    .transparency-section,
+    .process-section {
+      background-color: var(--light-color);
+      border-radius: 20px;
+      padding: 3rem 2rem 4rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      color: #222;
+    }
+
+    .problem-content,
+    .solution-content,
+    .transparency-content,
+    .process-content {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .problem-text,
+    .solution-text,
+    .transparency-text,
+    .process-text {
+      flex: 1 1 400px;
+      max-width: 600px;
+    }
+
+    .problem-text h3,
+    .solution-text h3,
+    .transparency-text h3,
+    .process-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--dark-color);
+      font-weight: 700;
+    }
+
+    .problem-text p,
+    .solution-text p,
+    .transparency-text p,
+    .process-text p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    .problem-text ul,
+    .solution-text ul,
+    .transparency-text ul,
+    .process-text ul {
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+      color: #555;
+      list-style-type: disc;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .problem-image,
+    .solution-image,
+    .transparency-image,
+    .process-image {
+      flex: 1 1 400px;
+      max-width: 600px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      background: white;
+    }
+
+    .problem-image img,
+    .solution-image img,
+    .transparency-image img,
+    .process-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 15px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .feature-card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 2.5rem 2rem 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      color: var(--dark-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .feature-card:hover,
+    .feature-card:focus-within {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      outline: none;
+    }
+
+    .feature-icon {
+      font-size: 3.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1.25rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2.5rem;
+      text-align: center;
+      color: var(--dark-color);
+    }
+
+    .tech-item {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem 1.5rem 2.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .tech-item:hover,
+    .tech-item:focus-within {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12);
+      outline: none;
+    }
+
+    .tech-icon {
+      font-size: 3.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .tech-item img {
+      height: 60px;
+      margin-bottom: 1rem;
+      object-fit: contain;
+      max-width: 100%;
+    }
+
+    .tech-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .tech-item p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .member-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: default;
+      color: var(--dark-color);
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+
+    .member-card:hover,
+    .member-card:focus-within {
+      transform: translateY(-10px);
+      outline: none;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .member-image {
+      height: 220px;
+      background-color: #ddd;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 4px solid var(--accent-color);
+    }
+
+    .member-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover .member-image img,
+    .member-card:focus-within .member-image img {
+      transform: scale(1.05);
+    }
+
+    .member-info {
+      padding: 1.5rem 1.5rem 2rem;
+    }
+
+    .member-info h3 {
+      color: var(--dark-color);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .member-info p {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+
+    .contact-container {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: var(--dark-color);
+    }
+
+    .contact-info,
+    .contact-form {
+      flex: 1 1 400px;
+      max-width: 600px;
+      background: white;
+      border-radius: 15px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    }
+
+    .contact-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+
+    .contact-info p {
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.8rem;
+      gap: 1rem;
+    }
+
+    .info-icon {
+      font-size: 1.8rem;
+      color: var(--accent-color);
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .info-item h4 {
+      margin-bottom: 0.3rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--dark-color);
+    }
+
+    .info-item p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+      white-space: pre-line;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--dark-color);
+      margin-bottom: 0.5rem;
+      display: block;
+      font-size: 1rem;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      border: 1.5px solid #ccc;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s;
+      resize: vertical;
+      min-height: 40px;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    input[type='text']:focus,
+    input[type='email']:focus,
+    textarea:focus {
+      border-color: var(--accent-color);
+      outline: none;
+      box-shadow: 0 0 8px rgba(233, 69, 96, 0.5);
+    }
+
+    button[type='submit'] {
+      align-self: flex-start;
+      background-color: var(--accent-color);
+      color: var(--light-color);
+      padding: 0.9rem 2.5rem;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 5px 15px rgba(233, 69, 96, 0.5);
+      user-select: none;
+    }
+
+    button[type='submit']:hover,
+    button[type='submit']:focus {
+      background-color: #d93a54;
+      transform: translateY(-3px);
+      outline: none;
+      box-shadow: 0 8px 20px rgba(217, 58, 84, 0.7);
+    }
+
+    /* Transparency Dashboard Preview */
+    .dashboard-preview {
+      background: white;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+    }
+
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .dashboard-title {
+      font-size: 1.5rem;
+      color: var(--dark-color);
+      font-weight: 700;
+    }
+
+    .dashboard-filters {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .dashboard-filters select {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      background: white;
+      font-size: 0.9rem;
+    }
+
+    .imports-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+
+    .imports-table th,
+    .imports-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    .imports-table th {
+      background-color: #f8f9fa;
+      color: var(--dark-color);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .imports-table tr:hover {
+      background-color: #f8f9fa;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .status-pending {
+      background-color: var(--warning-color);
+      color: #333;
+    }
+
+    .status-approved {
+      background-color: var(--success-color);
+      color: white;
+    }
+
+    .status-rejected {
+      background-color: var(--accent-color);
+      color: white;
+    }
+
+    .view-details {
+      color: var(--accent-color);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .dashboard-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid var(--accent-color);
+    }
+
+    .stat-card h4 {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .stat-card p {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--dark-color);
+    }
+
+    /* Process Steps */
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      left: 1.5rem;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--accent-color), var(--secondary-color));
+      border-radius: 2px;
+    }
+
+    .step {
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3rem;
+      height: 3rem;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      z-index: 1;
+    }
+
+    .step-content {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .step-content h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      color: var(--dark-color);
+      font-weight: 700;
+    }
+
+    .step-content p {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      padding: 3rem 1rem 2rem;
+      margin-top: auto;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.7);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      width: 90%;
+    }
+
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 10px;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    .footer-column p {
+      margin-bottom: 1rem;
+      opacity: 0.85;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.9rem;
+    }
+
+    .footer-links a {
+      color: var(--text-color);
+      opacity: 0.85;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: opacity 0.3s;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus {
+      opacity: 1;
+      outline: none;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      color: var(--text-color);
+      font-size: 1.3rem;
+      transition: all 0.3s;
+      user-select: none;
+    }
+
+    .social-links a:hover,
+    .social-links a:focus {
+      background-color: var(--accent-color);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1.8rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      opacity: 0.7;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    .footer-bottom a {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .problem-content,
+      .solution-content,
+      .transparency-content,
+      .process-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .contact-container {
+        flex-direction: column;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .dashboard-filters {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" role="banner">
+      <nav aria-label="Primary navigation">
+        <div class="logo">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/263/263115.png"
+            alt="Kalyan Dawar Shopping Mall Dubai Logo"
+            loading="lazy"
+          />
+          <h1>KALYAN DAWAR SHOPPING MALL DUBAI</h1>
+        </div>
+        <ul class="nav-links" role="menubar">
+          <li role="none">
+            <a href="#problem" role="menuitem" tabindex="0">Problem</a>
+          </li>
+          <li role="none">
+            <a href="#solution" role="menuitem" tabindex="0">Solution</a>
+          </li>
+          <li role="none">
+            <a href="#transparency" role="menuitem" tabindex="0">Transparency</a>
+          </li>
+          <li role="none">
+            <a href="#process" role="menuitem" tabindex="0">Process</a>
+          </li>
+          <li role="none">
+            <a href="#features" role="menuitem" tabindex="0">Features</a>
+          </li>
+          <li role="none">
+            <a href="#technology" role="menuitem" tabindex="0">Technology</a>
+          </li>
+          <li role="none">
+            <a href="#team" role="menuitem" tabindex="0">Team</a>
+          </li>
+          <li role="none">
+            <a href="#contact" role="menuitem" tabindex="0">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" role="region" aria-label="Introduction">
+    <div class="container">
+      <h2>
+        Decentralized Import Management System for Kalyan Dawar Shopping Mall Dubai
+      </h2>
+      <p>
+        A revolutionary blockchain-powered platform that ensures complete transparency in imports from all countries. Every product, payment, and transaction is recorded immutably on the blockchain, eliminating fraud and building trust with customers.
+      </p>
+      <a href="#transparency" class="btn" role="button" tabindex="0">View Live Dashboard</a>
+      <a href="#contact" class="btn btn-outline" role="button" tabindex="0">Request Access</a>
+    </div>
+  </section>
+
+  <section id="problem" class="problem-section" role="region" aria-labelledby="problem-title">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="problem-title">The Problem</h2>
+      </div>
+      <div class="problem-content">
+        <div class="problem-text">
+          <h3>Challenges in Traditional Import Systems</h3>
+          <p>
+            Current import management systems suffer from opacity, inefficiency, and vulnerability to fraud. Kalyan Dawar Shopping Mall Dubai faces these critical issues:
+          </p>
+          <ul>
+            <li>Lack of transparency in product origins and supply chains</li>
+            <li>Difficulty verifying authenticity of imported goods</li>
+            <li>Potential for invoice manipulation and payment fraud</li>
+            <li>No real-time tracking of shipments and payments</li>
+            <li>Limited oversight capabilities for the CEO</li>
+            <li>Customers unable to verify product authenticity and sourcing</li>
+          </ul>
+        </div>
+        <div class="problem-image">
+          <img
+            src="https://images.unsplash.com/photo-1581093588401-7a1a7a3a7a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Confused business manager looking at invoices and payments"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solution" class="solution-section" role="region" aria-labelledby="solution-title">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="solution-title">Our Solution</h2>
+      </div>
+      <div class="problem-content">
+        <div class="solution-image">
+          <img
+            src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Blockchain technology concept with digital network"
+            loading="lazy"
+          />
+        </div>
+        <div class="solution-text">
+          <h3>Blockchain-Powered Import Transparency</h3>
+          <p>
+            Our decentralized system records every aspect of the import process on an immutable blockchain ledger, providing unprecedented transparency and security:
+          </p>
+          <ul>
+            <li>Every product's complete journey from manufacturer to store shelf</li>
+            <li>Real-time tracking of shipments with GPS and IoT integration</li>
+            <li>Automated smart contracts for payments upon delivery verification</li>
+            <li>QR codes on products for customers to verify authenticity</li>
+            <li>CEO dashboard for complete oversight of all transactions</li>
+            <li>Publicly verifiable records of all imports (with sensitive data encrypted)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="transparency" class="transparency-section" role="region" aria-labelledby="transparency-title">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="transparency-title">Complete Transparency</h2>
+      </div>
+      <div class="transparency-content">
+        <div class="transparency-text">
+          <h3>Public Import Dashboard</h3>
+          <p>
+            Our blockchain-powered dashboard provides complete visibility into every import transaction. Customers, suppliers, and management can verify:
+          </p>
+          <ul>
+            <li>Product origin and manufacturing details</li>
+            <li>Exact quantities imported with batch numbers</li>
+            <li>Quality inspection reports and certifications</li>
+            <li>Payment amounts and transaction timestamps</li>
+            <li>Shipping details and customs clearance</li>
+            <li>Storage conditions during transit</li>
+          </ul>
+          <p>
+            This level of transparency builds trust with customers and ensures accountability throughout the supply chain.
+          </p>
+        </div>
+        <div class="transparency-image">
+          <div class="dashboard-preview">
+            <div class="dashboard-header">
+              <div class="dashboard-title">Import Transparency Dashboard</div>
+              <div class="dashboard-filters">
+                <select>
+                  <option>Last 30 Days</option>
+                  <option>Last 90 Days</option>
+                  <option>All Time</option>
+                </select>
+                <select>
+                  <option>All Countries</option>
+                  <option>China</option>
+                  <option>India</option>
+                  <option>Turkey</option>
+                  <option>Italy</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="dashboard-stats">
+              <div class="stat-card">
+                <h4>Total Imports</h4>
+                <p>1,247</p>
+              </div>
+              <div class="stat-card">
+                <h4>Countries</h4>
+                <p>18</p>
+              </div>
+              <div class="stat-card">
+                <h4>Verified Products</h4>
+                <p>98.7%</p>
+              </div>
+              <div class="stat-card">
+                <h4>Fraud Attempts</h4>
+                <p>0</p>
+              </div>
+            </div>
+            
+            <table class="imports-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Origin</th>
+                  <th>Quantity</th>
+                  <th>Value</th>
+                  <th>Status</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Luxury Handbags</td>
+                  <td>Italy</td>
+                  <td>150</td>
+                  <td>$45,000</td>
+                  <td><span class="status-badge status-approved">Approved</span></td>
+                  <td class="view-details">View</td>
+                </tr>
+                <tr>
+                  <td>Silk Scarves</td>
+                  <td>India</td>
+                  <td>500</td>
+                  <td>$12,500</td>
+                  <td><span class="status-badge status-approved">Approved</span></td>
+                  <td class="view-details">View</td>
+                </tr>
+                <tr>
+                  <td>Electronics</td>
+                  <td>China</td>
+                  <td>1,200</td>
+                  <td>$78,000</td>
+                  <td><span class="status-badge status-pending">Pending</span></td>
+                  <td class="view-details">View</td>
+                </tr>
+                <tr>
+                  <td>Leather Jackets</td>
+                  <td>Turkey</td>
+                  <td>300</td>
+                  <td>$36,000</td>
+                  <td><span class="status-badge status-rejected">Rejected</span></td>
+                  <td class="view-details">View</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="process-section" role="region" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="process-title">Fraud-Free Process</h2>
+      </div>
+      <div class="process-content">
+        <div class="process-image">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Blockchain process flow"
+            loading="lazy"
+          />
+        </div>
+        <div class="process-text">
+          <h3>How Our System Prevents Fraud</h3>
+          <p>
+            Our decentralized import management system eliminates every opportunity for fraud through blockchain technology and smart contracts:
+          </p>
+          
+          <div class="process-steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Supplier Verification</h4>
+                <p>All suppliers are verified and registered on the blockchain with their credentials and history permanently recorded.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Purchase Order Creation</h4>
+                <p>The import manager creates purchase orders that are cryptographically signed and recorded on the blockchain.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Quality Inspection</h4>
+                <p>Third-party quality inspections are recorded with photos and reports stored immutably on the blockchain.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4>Smart Contract Payments</h4>
+                <p>Payments are automatically released only when all conditions are met, with CEO approval recorded on-chain.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">5</div>
+              <div class="step-content">
+                <h4>Customer Verification</h4>
+                <p>Customers can scan QR codes to verify product authenticity and view complete import history.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features-section" role="region" aria-labelledby="features-title">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="features-title">Key Features</h2>
+      </div>
+      <div class="features">
+        <div class="feature-card" tabindex="0" role="article" aria-label="End-to-end traceability">
+          <div class="feature-icon" aria-hidden="true">
+            <i class="fas fa-route"></i>
+          </div>
+          <h3>End-to-End Traceability</h3>
+          <p>Track every product from manufacturer to store shelf with immutable records of each step in the journey.</p>
+        </div>
+        <div class="feature-card" tabindex="0" role="article" aria-label="Smart contract payments">
+          <div class="feature-icon" aria-hidden="true">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3>Smart Contract Payments</h3>
+          <p>Automated payments triggered only when all import conditions are verified, with CEO oversight.</p>
+        </div>
+        <div class="feature-card" tabindex="0" role="article" aria-label="Quality verification">
+          <div class="feature-icon" aria-hidden="true">
+            <i class="fas fa-check-double"></i>
+          </div>
+          <h3>Quality Verification</h3>
+          <p>Third-party quality inspections with results permanently recorded on the blockchain.</p>
+        </div>
+        <div class="feature-card" tabindex="0" role="article" aria-label="Real-time tracking">
+          <div class="feature-icon" aria-hidden="true">
+            <i class="fas fa-satellite-dish"></i>
+          </div>
+          <h3>Real-Time Tracking</h3>
+          <p>GPS and IoT sensors provide live updates on shipment locations and conditions.</p>
+        </div>
+        <div class="feature-card" tabindex="0" role="article" aria-label="Product authentication">
+          <div class="feature-icon" aria-hidden="true">
+            <i class="fas fa-qrcode"></i>
+          </div>
+          <h3>Product Authentication</h3>
+          <p>Customers verify product authenticity by scanning QR codes linked to blockchain records.</p>
+        </div>
+        <div class="feature-card" tabindex="0" role="article" aria-label="Fraud detection">
+          <div class="feature-icon" aria-hidden="true">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Fraud Detection</h3>
+          <p>AI-powered anomaly detection identifies and flags suspicious activities automatically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technology" class="tech-stack" role="region" aria-labelledby="technology-title">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="technology-title">Technology Stack</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item" tabindex="0" role="article" aria-label="Ethereum blockchain">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/1200px-Ethereum-icon-purple.svg.png"
+            alt="Ethereum logo"
+            loading="lazy"
+          />
+          <h3>Ethereum Blockchain</h3>
+          <p>Secure, decentralized ledger for all import transactions and records.</p>
+        </div>
+        <div class="tech-item" tabindex="0" role="article" aria-label="IPFS storage">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ipfs-logo-1024-ice-text.png/640px-Ipfs-logo-1024-ice-text.png"
+            alt="IPFS logo"
+            style="height: 50px"
+            loading="lazy"
+          />
+          <h3>IPFS</h3>
+          <p>Decentralized storage for documents, photos, and inspection reports.</p>
+        </div>
+        <div class="tech-item" tabindex="0" role="article" aria-label="Solidity smart contracts">
+          <img
+            src="https://soliditylang.org/images/logo.svg"
+            alt="Solidity logo"
+            style="height: 50px"
+            loading="lazy"
+          />
+          <h3>Solidity</h3>
+          <p>For writing secure, self-executing smart contracts.</p>
+        </div>
+        <div class="tech-item" tabindex="0" role="article" aria-label="Chainlink oracles">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Chainlink_Logo_Blue.svg/1200px-Chainlink_Logo_Blue.svg.png"
+            alt="Chainlink logo"
+            style="height: 40px"
+            loading="lazy"
+          />
+          <h3>Chainlink</h3>
+          <p>Oracle network for real-world data integration.</p>
+        </div>
+        <div class="tech-item" tabindex="0" role="article" aria-label="IoT integration">
+          <div class="tech-icon" aria-hidden="true">
+            <i class="fas fa-wifi"></i>
+          </div>
+          <h3>IoT Devices</h3>
+          <p>For real-time tracking of shipments and storage conditions.</p>
+        </div>
+        <div class="tech-item" tabindex="0" role="article" aria-label="AI fraud detection">
+          <div class="tech-icon" aria-hidden="true">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>AI Fraud Detection</h3>
+          <p>Machine learning models to identify suspicious patterns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="team" role="region" aria-labelledby="team-title">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="team-title">Our Team</h2>
+      </div>
+      <div class="team-members">
+        <div class="member-card" tabindex="0" role="article" aria-label="Kalyan Dawar - CEO">
+          <div class="member-image">
+            <img
+              src="d:\personal data\personal pic\WhatsApp Image 2023-06-11 at 11.16.05 AM.jpeg"
+              alt="Portrait of Kalyan Dawar, CEO"
+              loading="lazy"
+            />
+          </div>
+          <div class="member-info">
+            <h3>Kalyan Dawar</h3>
+            <p>Chief Executive Officer</p>
+            <p>Provides final approval for all import transactions and payments.</p>
+          </div>
+        </div>
+        <div class="member-card" tabindex="0" role="article" aria-label="Import Manager">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Portrait of Import Manager"
+              loading="lazy"
+            />
+          </div>
+          <div class="member-info">
+            <h3>Import Manager</h3>
+            <p>Import Operations</p>
+            <p>Manages all import processes with blockchain verification.</p>
+          </div>
+        </div>
+        <div class="member-card" tabindex="0" role="article" aria-label="Quality Assurance">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Portrait of Quality Assurance Specialist"
+              loading="lazy"
+            />
+          </div>
+          <div class="member-info">
+            <h3>Quality Assurance</h3>
+            <p>Product Verification</p>
+            <p>Ensures all imported goods meet quality standards.</p>
+          </div>
+        </div>
+        <div class="member-card" tabindex="0" role="article" aria-label="Blockchain Developer">
+          <div class="member-image">
+            <img
+              src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Portrait of Blockchain Developer"
+              loading="lazy"
+            />
+          </div>
+          <div class="member-info">
+            <h3>Blockchain Developer</h3>
+            <p>Smart Contract Specialist</p>
+            <p>Develops and maintains the decentralized system.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" role="region" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="contact-title">Contact Us</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info" aria-label="Contact information">
+          <h3>Get in Touch</h3>
+          <p>
+            Interested in learning more about our decentralized import management system? Contact our team for a demonstration.
+          </p>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4>Address</h4>
+              <p>
+                Kalyan Dawar Shopping Mall<br />
+                Dubai, United Arab Emirates
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>imports@kalyandawarshoppingmall.ae</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <p>+971 4 123 4567</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>
+                Sunday - Thursday: 9AM - 6PM<br />
+                Friday: Closed<br />
+                Saturday: 10AM - 4PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form" aria-label="Contact form">
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn" aria-label="Send message">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>About Our System</h3>
+          <p>
+            The Kalyan Dawar Shopping Mall Decentralized Import Management System ensures complete transparency and eliminates fraud in international imports through blockchain technology.
+          </p>
+          <div class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="Facebook" tabindex="0"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter" tabindex="0"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn" tabindex="0"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram" tabindex="0"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#problem" tabindex="0">The Problem</a></li>
+            <li><a href="#solution" tabindex="0">Our Solution</a></li>
+            <li><a href="#transparency" tabindex="0">Transparency</a></li>
+            <li><a href="#process" tabindex="0">Fraud-Free Process</a></li>
+            <li><a href="#features" tabindex="0">Features</a></li>
+            <li><a href="#technology" tabindex="0">Technology</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#" tabindex="0">Import Dashboard</a></li>
+            <li><a href="#" tabindex="0">Supplier Portal</a></li>
+            <li><a href="#" tabindex="0">API Documentation</a></li>
+            <li><a href="#" tabindex="0">White Paper</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Location</h3>
+          <p>
+            Kalyan Dawar Shopping Mall<br />
+            Dubai, United Arab Emirates
+          </p>
+          <p>
+            <i class="fas fa-globe"></i>
+            <a href="https://kalyandawarshoppingmall.ae" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: 600;">kalyandawarshoppingmall.ae</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 Kalyan Dawar Shopping Mall Dubai. All Rights Reserved. | Powered by Blockchain Technology
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      });
+    });
+
+    // Form submission handling
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Get form values
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const subject = this.subject.value.trim();
+      const message = this.message.value.trim();
+
+      if (!name || !email || !subject || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      // Basic email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      // Here you would typically send the form data to a server
+      // For this demo, we'll just show an alert
+      alert(`Thank you, ${name}! Your message about "${subject}" has been received. We'll contact you at ${email} soon.`);
+
+      // Reset the form
+      this.reset();
+    });
+
+    // Dashboard table row click handler
+    document.querySelectorAll('.view-details').forEach(item => {
+      item.addEventListener('click', function() {
+        alert('This would open detailed import information in a real implementation, showing the complete blockchain record of this import transaction.');
+      });
+    });
+  </script>
+</body>
+</html>

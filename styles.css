@@ -1,0 +1,9 @@
+/* Paste ALL your <style> tag content here */
+:root {
+  --primary-color: #1a1a2e;
+  /* ... rest of your CSS ... */
+}
+
+@media (max-width: 768px) {
+  /* ... responsive styles ... */
+}

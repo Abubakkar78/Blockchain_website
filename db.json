@@ -1,0 +1,20 @@
+{
+  "imports": [
+    {
+      "id": 1,
+      "productName": "Luxury Handbags",
+      "originCountry": "Italy",
+      "quantity": 150,
+      "valueUSD": 45000,
+      "status": "Approved"
+    },
+    {
+      "id": 2,
+      "productName": "Silk Scarves",
+      "originCountry": "India",
+      "quantity": 500,
+      "valueUSD": 12500,
+      "status": "Approved"
+    }
+  ]
+}
